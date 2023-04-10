@@ -8,6 +8,7 @@ class GlassFloatingActionButton extends StatelessWidget {
   final double? border;
   final double? blur;
   final Object? heroTag;
+  final String? tooltip;
   final LinearGradient? linearGradient;
   final LinearGradient? borderGradient;
   final BorderRadius? borderRadius;
@@ -22,6 +23,7 @@ class GlassFloatingActionButton extends StatelessWidget {
     this.borderGradient,
     this.borderRadius,
     this.heroTag,
+    this.tooltip,
   }) : super(key: key);
 
   @override
@@ -33,6 +35,7 @@ class GlassFloatingActionButton extends StatelessWidget {
       linearGradient: linearGradient,
       borderGradient: borderGradient,
       child: FloatingActionButton(
+        tooltip: tooltip,
         heroTag: heroTag,
         elevation: 0,
         onPressed: onPressed,
