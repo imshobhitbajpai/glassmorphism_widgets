@@ -1,3 +1,23 @@
+
+## 0.2.2
+* formated codes
+
+## 0.2.1
+* refactored codes
+
+## 0.2.0
+* fix:did not fit size of GlassAppBar and GlassListTile
+* add documents for widgets
+
+## 0.1.6
+* support for dart3
+
+## 0.1.5
+* fix render GlassAppBar and GlassBottomSheet
+
+## 0.1.4
+* added heroTag in GlassFloatingActionButton
+
 ## 0.1.3
 * add example for pub.dev
 

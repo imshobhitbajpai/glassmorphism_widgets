@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism_widgets/src/glass_container.dart';
 
+/// Show a BottomSheet with a glass effect.
 void showGlassBottomSheet({
   required BuildContext context,
   Widget? child,
@@ -15,13 +16,8 @@ void showGlassBottomSheet({
     backgroundColor: Colors.transparent,
     barrierColor: Colors.black.withOpacity(0.2),
     builder: (BuildContext ctx) {
-      final _borderRadius = borderRadius ??
-          BorderRadius.only(
-            topLeft: Radius.circular(radius),
-            topRight: Radius.circular(radius),
-          );
       return GlassContainer(
-        borderRadius: _borderRadius,
+        radius: radius,
         blur: blur,
         linearGradient: linearGradient,
         borderGradient: borderGradient,

@@ -1,0 +1,29 @@
+name: PR review
+
+on:
+  pull_request:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: 'master'
+          cache: true
+      - name: Install dependencies
+        run: |
+          flutter pub get
+      - name: Analyze
+        run: |
+          flutter analyze
+      - name: Run tests
+        run: |
+          flutter test
+      - name: Dry run
+        run: |
+          flutter pub publish --dry-run
+        
